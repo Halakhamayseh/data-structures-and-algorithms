@@ -49,6 +49,7 @@ const sortNames = (arr) => {
       return -1;
     }
   });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,6 +73,7 @@ const sortNumbers = (arr) => {
       return 0;
     }
   });
+  return arr;
 };
 
 
@@ -96,6 +98,7 @@ const sortBackwards = (arr) => {
       return 0;
     }
   });
+  return arr;
 };
 
 
@@ -122,6 +125,7 @@ const alphabetize = (arr) => {
       return 0;
     }
   });
+  return arr;
 };
 
 
@@ -151,6 +155,7 @@ const sortByPrice = (arr) => {
       return 0;
     }
   });
+  return arr;
 };
 
 
