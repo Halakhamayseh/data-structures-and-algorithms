@@ -96,9 +96,11 @@ Write a function named checkValues that takes in an object and a value and retur
 const checkValues = (obj, value) => {
   // Solution code here...
 
-  if (Object.values(obj) === value) {
+  if (Object.values(obj) == value) {
     return true;
-  } 
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,8 +126,8 @@ const updateNumbers = (obj) => {
   // Solution code here...
   let arrayedObject = [];
 
-  updateNumbers.forEach((item) => {
-    arrayedObject.push(item.toString(": "));
+  obj.toArray().forEach((item) => {
+    arrayedObject.push(item.join(": "));
   });
   return arrayedObject;
 };
