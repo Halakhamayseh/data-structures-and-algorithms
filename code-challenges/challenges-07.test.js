@@ -8,8 +8,9 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
-  let regex = /0/g;
-  return string.replace(regex, "zero");
+
+  let rej = /0/g;
+  return string.replace(rej, 'zero');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,10 +21,10 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   // Solution code here...
-  const newArr=arr.map(item => {
+  const arrD = arr.map(item => {
     return item + 1;
   });
-  return newArr;
+  return arrD;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,10 +35,10 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
-  const newArr = arr.map(item => {
+  const arrD = arr.map(item => {
     return item + '?';
   });
-  return newArr;
+  return arrD;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,11 +53,12 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
-  let powerArr = [];
+  let nArr = [];
   for (let index = 0; index < arr.length; index++) {
-    powerArr.push(Math.pow(2, arr[index]));
+    let element = Math.pow(2,arr[index]);
+    nArr.push(element);
   }
-  return powerArr;
+  return nArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,11 +69,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
-  let powerArr = [];
+  let nArr = [];
   arr.forEach(item => {
-    powerArr.push(Math.pow(2, item));
+    let element = Math.pow(2, item);
+    nArr.push(element);
   });
-  return powerArr;
+  return nArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,8 +85,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
-  let nArr = arr.map(item => {
-    (Math.pow(2, item));
+  const nArr=arr.map(item => {
+    return Math.pow(2, item);
   });
   return nArr;
 };
